@@ -1,0 +1,17 @@
+---
+- hosts: ubuntu
+  become: yes
+  become_user: root
+   
+  tasks:
+    - name: "copying war file"
+      command: cp /jenkin/Spring3HibernateApp/target/Spring3HibernateApp.war /var/lib/tomcat8/webapps/
+     
+  tasks:  
+    - name: "restarting tomcat server"
+      service:
+        name: tomcat8
+        state: stopped
+       
+
+

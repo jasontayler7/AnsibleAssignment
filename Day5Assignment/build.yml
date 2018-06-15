@@ -1,0 +1,24 @@
+---
+ - hosts: ubuntu
+   become: yes
+   become_user: root
+   tasks:
+     - name: "Cloning  git repo"
+       git:
+        repo: 'https://github.com/kamal24111991/ContinuousIntegration.git'
+        dest: /jenkin/
+        clone: yes
+        update: no
+     - name:  "Installing maven"
+       apt:
+        name: maven
+        state: latest
+        update_cache: yes
+        cache_valid_time: 3600
+     - name: "building & Testing"
+       command: mvn package install
+       args: 
+        chdir: /jenkin/Spring3HibernateApp/
+         
+...
+

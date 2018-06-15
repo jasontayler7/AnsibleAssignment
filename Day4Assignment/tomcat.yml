@@ -1,0 +1,14 @@
+---
+ - hosts: Centos
+   remote_user: root
+   tasks:
+    - name: Install Tomcat 7
+      yum:
+       name: tomcat
+       state: latest
+    - name: Copy appwar to webapp
+      copy:
+       src: /opt/sample.war
+       dest: /usr/share/tomcat/webapps
+...
+

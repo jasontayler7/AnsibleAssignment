@@ -1,0 +1,18 @@
+---
+- hosts: ubuntu
+  become: yes
+  become_user: root
+  
+  tasks:
+    - name: 
+      uri: 
+        url: http://192.168.33.105:8080
+        status_code: 200
+      register: result
+      until: result.status == 200
+      retries: 5
+      delay: 10
+
+
+
+
