@@ -1,0 +1,6 @@
+Create an Ansible playbook that targets members of the "app" group has the following state:
+
+    The tomcat7 is installed in all host
+    Has the war file in webapps folder specified in appwar.
+    Tomcat is started on each host.
+
