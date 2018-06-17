@@ -38,6 +38,7 @@ In my deployement, I have used Centos platform and apart from that i also tested
 Yaml file link :
  https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/tomcat.yml
 
+Output Screenshot
 (https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/media/provisionJenkinJob.png)
 
 
@@ -47,6 +48,7 @@ Yaml file link :
 
 https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/build.yml
 
+Output Screenshot
 (https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/media/BuildJenkinsJob.png)
 
 3 Deploy :
@@ -55,4 +57,5 @@ Yaml file link :
 
 https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/deploy.yml
 
+Output Screenshot
 (https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/media/DeployJenkinsJob.png)
