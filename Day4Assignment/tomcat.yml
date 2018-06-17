@@ -1,14 +1,35 @@
 ---
- - hosts: Centos
-   remote_user: root
+ - hosts: centos
+   become: true
+   become_user: root
    tasks:
-    - name: Install Tomcat 7
+    - name: Install java 
+      yum:
+       name: java-1.8.0-openjdk
+       state: latest
+    - name: "set JAVA_HOME and JRE_HOME environment variables"
+      lineinfile:
+       path: /etc/environment
+       line: "JAVA_HOME=/usr/lib/jvm/java-8-oracle"
+       line: "JRE_HOME=/usr/lib/jvm/java-8-oracle/jre"
+    - name: Install Tomcat 
       yum:
        name: tomcat
        state: latest
-    - name: Copy appwar to webapp
-      copy:
-       src: /opt/sample.war
-       dest: /usr/share/tomcat/webapps
+    - name: Install Tomcat Admin package
+      yum:
+       name: tomcat-webapps
+       state: latest
+    - name: Install Tomcat Admin package
+      yum:
+       name: tomcat-admin-webapps
+       state: latest
+    - name: "Enable tomcat"
+      service:
+       name: tomcat
+       enabled: yes
+   - name: "starting tomcat"
+     service:
+       name: tomcat
+       state: started
 ...
-
