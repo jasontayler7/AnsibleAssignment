@@ -26,3 +26,32 @@ Resources
     service module
     uri module
     file module
+    
+    
+Solution :
+
+I have performed provision, Build & Deployement using ansible modules with jenkins.
+In my deployement, I have used Centos platform and apart from that i also tested and performed this activity on Ubuntu 16.0 Xenial.
+
+1  Provisioning :
+
+Yaml file link :
+ https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/tomcat.yml
+
+![Job DSL Plugin](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/media/provisionJenkinJob.png)
+
+2 Build :
+
+Yaml file link :
+
+https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/build.yml
+
+![Job DSL Plugin](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/media/BuildJenkinsJob.png)
+
+3 Deploy :
+
+Yaml file link :
+
+https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/deploy.yml
+
+![Job DSL Plugin](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day5Assignment/centos/media/DeployJenkinsJob.png)
