@@ -1,6 +1,6 @@
 ---
 
-- name: "Install tomcat 8 on 2 hosts"
+- name: "Install tomcat"
 
   hosts: all
 
@@ -20,7 +20,7 @@
 
        state: present
 
-   - name: "updating"
+   - name: 
 
      apt:
 

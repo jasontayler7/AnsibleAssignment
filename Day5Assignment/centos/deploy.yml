@@ -1,20 +1,21 @@
 ---
-- hosts: ubuntu
+- hosts: centos
   become: yes
   become_user: root
    
   tasks:
     - name: "copying war file"
-      command: cp /jenkin/Spring3HibernateApp/target/Spring3HibernateApp.war /var/lib/tomcat8/webapps/
+      command: cp /jenkin/Spring3HibernateApp/target/Spring3HibernateApp.war /var/lib/tomcat/webapps/
      
   tasks:  
     - name: "restarting tomcat server"
       service:
-        name: tomcat8
+        name: tomcat
         state: restarted
     - name: 
       uri: 
         url: http://192.168.33.105:8080
+        status: 200
        
 
 

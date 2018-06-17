@@ -28,7 +28,7 @@ Step 1:
 
         ansible Debian -m command -a "apt-get update"
         ansible Debian -m apt -a "name=default-jdk state=present"
-        ansible Debian -m apt -a "name=tomcat7 state=present"
+        ansible Debian -m a	pt -a "name=tomcat7 state=present"
       
         ansible Debian -m lineinfile -a "path=/etc/default/tomcat7 regexp='^JAVA_OPTS='  line='JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC'"
 
