@@ -1,0 +1,12 @@
+---
+
+- name: Replacing new ssh keys with old
+  hosts: all
+  become_user: root
+  tasks:
+  - name: "New Keys"
+    authorized_key:
+      user: vagrant
+      key: "{{ lookup('file', '/home/vagrant/.ssh/id_rsa1.pub') }}"
+      state: present
+      exclusive: True
