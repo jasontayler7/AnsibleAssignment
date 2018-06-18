@@ -12,6 +12,7 @@ Solution :
 
         1. Firstly i have created new ssh key file using command ssh-keygen for 'Vagrant' user at default location : /home/vagrant/.ssh/id_rsa1
         2. Now as per the given condition, i have taken reference of module and created a playbook.
+           Deleted the previous key and add new keys in Vagrant user of remote machine.
            Please see below yaml file link :
            https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day6Assignment/sshkeysrotation.yml
         3. Tested the ssh connection and see attached output screenshot.
