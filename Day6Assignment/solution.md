@@ -16,7 +16,8 @@ Solution :
            https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day6Assignment/sshkeysrotation.yml
            
            Output screenshot:
-           ![image] (https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day6Assignment/media/RotatingPlaybook.png)
+           [[https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day6Assignment/media/RotatingPlaybook.png]]
+           [[ AnsibleAssignment/Day6Assignment/media/Validate.png ]]
            
 
 
