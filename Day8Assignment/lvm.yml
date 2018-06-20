@@ -12,13 +12,13 @@
      vg: myvg
      pvs: /dev/sdb
      pesize: 1
-  - name: Create a logical volume of 512m
+  - name: Create a logical volume
     lvol:
      vg: myvg
      lv: mylv
      size: 2m
      pvs: /dev/sdb
-  - name: Create a ext2 filesystem on /dev/sdb
+  - name: Create a ext4 filesystem on /dev/sdb
     filesystem:
      fstype: ext4
      dev: /dev/myvg/mylv
