@@ -10,3 +10,17 @@
 1. Mount newly created file system.
 
 
+Solution :
+
+Step 1 Install lvm2
+
+Step 2 Created Volume Group
+
+Step 3 Created logical volume
+
+Step 4 mount the newly created lvm and created entry in fstab
+
+Please see yaml file links 
+
+User management : 
+
