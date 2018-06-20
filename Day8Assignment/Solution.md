@@ -20,7 +20,19 @@ Step 3 Created logical volume
 
 Step 4 mount the newly created lvm and created entry in fstab
 
-Please see yaml file links 
+Please see yaml file links :
 
-User management : 
+User management : https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day8Assignment/users.yml
+
+![usernameplaybook](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day8Assignment/media/usernameplaybook.png)
+
+
+Please see yaml file links :
+
+LVM :https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day8Assignment/lvm.yml
+
+![lvmvalidate](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day8Assignment/media/lvmvalidate.png)
+
+ ![lvdisplay](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day8Assignment/media/lvdisplay.png)
+
 
