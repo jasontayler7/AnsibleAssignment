@@ -6,8 +6,11 @@ Created swap memory and successfully mounted. Please see the Yaml file link.
 https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day7Assignment/swapplaybook.yml
 
 Step 1: Created 512 MB partion
+
 step 2: Make the swap 
+
 step 3: Adding entry to fstab
+
 step 4: Turn on the swap space.
 
 
