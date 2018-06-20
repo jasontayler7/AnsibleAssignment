@@ -34,5 +34,7 @@ LVM :https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day8Assignme
 ![lvmvalidate](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day8Assignment/media/lvmvalidate.png)
 
  ![lvdisplay](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day8Assignment/media/lvdisplay.png)
+ 
+ ![extensionvalidate](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day8Assignment/media/extensionvalidate.png)
 
 
