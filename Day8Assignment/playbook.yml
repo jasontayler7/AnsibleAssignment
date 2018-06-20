@@ -1,0 +1,66 @@
+- name: Create 5 user
+  hosts: centos
+  become: yes
+  become_user: root
+  tasks:
+  - name: Ensure group "Administrator"	 exists
+    group:
+      name: Administrator
+      state: present
+  - name: create a user james
+    user:
+      name: james
+      home: /home/james
+      shell: /bin/bash	
+      group: Administrator
+      append: yes 
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+  - name: create a user kamal  
+    user:
+      name: kamal
+      home: /home/kamal
+      shell: /bin/bash
+      group: Administrator
+      append: yes
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+  - name: create a user rajat
+    user:
+      name: rajat
+      home: /home/rajat
+      shell: /bin/bash
+      group: Administrator
+      append: yes
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+  - name: create a user taran  
+    user:
+      name: taran
+      home: /home/taran
+      shell: /bin/bash
+      group: Administrator
+      append: yes
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+  - name: create a user maria  
+    user:
+      name: maria
+      home: /home/maria
+      shell: /bin/bash
+      group: Administrator
+      append: yes
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+   - name: Creating directory   
+     file:
+      path: /etc/Devops_ninja
+      state: directory
+      mode: 0755
+      group: Administrator
+

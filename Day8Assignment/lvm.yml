@@ -1,0 +1,37 @@
+- name: Creating logical volume	
+  hosts: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+  - name: Install lvm2
+    apt:
+     name: lvm2
+     state: present
+  - name: Create Volume group of 4MB
+    lvg:
+     vg: myvg
+     pvs: /dev/sdb
+     pesize: 1
+  - name: Create a logical volume of 512m
+    lvol:
+     vg: myvg
+     lv: mylv
+     size: 2m
+     pvs: /dev/sdb
+  - name: Create a ext2 filesystem on /dev/sdb
+    filesystem:
+     fstype: ext4
+     dev: /dev/myvg/mylv
+  - name: Creating directory   
+    file:
+     path: /mnt/ninja
+     state: directory
+     mode: 0755
+    
+  - name: Adding entry to fstab
+    mount:
+     path: /mnt/ninja
+     src: /dev/myvg/mylv
+     fstype: ext4
+     opts: defaults
+     state: present

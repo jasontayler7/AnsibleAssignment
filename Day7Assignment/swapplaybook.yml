@@ -1,0 +1,20 @@
+---
+- name: swap space
+  hosts: ubuntu
+  become_user: root
+  tasks:
+  - name: Creating swap
+    command: dd if=/dev/zero of=/swapmem bs=1M count=512
+    when: ansible_swaptotal_mb < 1
+
+  - name: Make swap to swapmem
+    command: mkswap /swapmem
+    when: ansible_swaptotal_mb < 1
+
+  - name: Adding entry to fstab
+    action: lineinfile dest=/etc/fstab regexp="swap" line="/swapmem swap swap default 0 0" state=present
+
+  - name: Now Turn on swap
+    command: swapon -a
+...
+
