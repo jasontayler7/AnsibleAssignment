@@ -11,6 +11,6 @@ step 3: Adding entry to fstab
 step 4: Turn on the swap space.
 
 
-[Swapplaybook](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day7Assignment/media/Swapplaybook.png)
+![Swapplaybook](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day7Assignment/media/Swapplaybook.png)
 
-[SwapValidate](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day7Assignment/media/SwapValidate.png)
+![SwapValidate](https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day7Assignment/media/SwapValidate.png)
