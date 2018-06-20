@@ -5,7 +5,7 @@ Solution :
 Created swap memory and successfully mounted. Please see the Yaml file link.
 https://github.com/kamal24111991/AnsibleAssignment/blob/master/Day7Assignment/swapplaybook.yml
 
-Step 1: Created 512 MB partion
+Step 1: Created 512 MB partition
 
 step 2: Make the swap 
 
