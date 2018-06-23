@@ -1,0 +1,45 @@
+---
+- name: Firwall Playbook
+  become: yes
+  hosts: ubuntu
+  become_user: root
+  tasks:
+  - name: Creating a ansible-centos file on remote machine
+    file:
+      path: /ansible-ubuntu
+      state: touch
+      mode: 644
+  - name: List all the ports
+    shell: firewall-cmd --list-port
+    register: foo_result
+  - name: storing output in a file
+    copy: content={{ foo_result }} dest=/ansible-ubuntu
+  - name: ssh port open or not
+    wait_for:
+      port: 22
+      timeout: 5
+  - name: Debugging
+    debug:
+      msg: ok
+  - name: adding port 22 to firewall
+    firewalld:
+      port: 22/tcp
+      permanent: true
+      state: enabled
+  - name: Adding port 8080 in firewall
+    firewalld:
+      port: 8080-8081/tcp
+      permanent: true
+      state: disabled
+  - name: Bounce firewalld
+    service:
+      name: firewalld
+      state: restarted
+  - name: List all the ports
+    shell: firewall-cmd --list-port
+    register: foo_result
+  - name: storing output in a file
+    copy: content={{ foo_result }} dest=/ansible-ubuntu
+
+~                                                                                                                                                                                                           
+~                        
