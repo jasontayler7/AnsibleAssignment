@@ -30,7 +30,7 @@
     firewalld:
       port: 8080-8081/tcp
       permanent: true
-      state: disabled
+      state: enabled
   - name: Bounce firewalld
     service:
       name: firewalld
